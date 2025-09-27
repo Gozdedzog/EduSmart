@@ -1,0 +1,25 @@
+{
+  "name": "smart-learn",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Smart Learn - Personalized Learning Platform",
+  "scripts": {
+    "dev": "pnpm -C apps/web dev",
+    "build": "pnpm -C apps/web build",
+    "start": "pnpm -C apps/web start",
+    "lint": "pnpm -C apps/web lint",
+    "lint:fix": "pnpm -C apps/web lint:fix",
+    "format": "pnpm -C apps/web format",
+    "format:check": "pnpm -C apps/web format:check",
+    "typecheck": "pnpm -C apps/web typecheck",
+    "clean": "pnpm -r exec rm -rf node_modules && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+}

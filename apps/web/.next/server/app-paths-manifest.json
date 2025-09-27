@@ -1,0 +1,8 @@
+{
+  "/api/courses/route": "app/api/courses/route.js",
+  "/api/egitim-gecmisi/route": "app/api/egitim-gecmisi/route.js",
+  "/api/test-sonuclari/route": "app/api/test-sonuclari/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/icerikler/page": "app/icerikler/page.js",
+  "/sonuclar/page": "app/sonuclar/page.js"
+}
