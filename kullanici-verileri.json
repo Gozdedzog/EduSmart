@@ -162,6 +162,19 @@
       "id": "1758977801356",
       "createdAt": "2025-09-27T12:56:41.356Z",
       "updatedAt": "2025-09-27T12:56:41.356Z"
+    },
+    {
+      "email": "mibalo7071@etenx.com",
+      "password": "mibalo7071",
+      "firstName": "Zerrin",
+      "lastName": "Eylem",
+      "age": 17,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1759005520545",
+      "createdAt": "2025-09-27T20:38:40.545Z",
+      "updatedAt": "2025-09-27T20:38:40.545Z"
     }
   ]
 }

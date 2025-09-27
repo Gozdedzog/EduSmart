@@ -1,4 +1,4 @@
-// File: /Users/hilal/Desktop/MLProje/apps/web/src/app/api/courses/route.ts
+// File: /Users/hilal/Desktop/edusmart_27_09/apps/web/src/app/api/courses/route.ts
 import * as entry from '../../../../../src/app/api/courses/route.js'
 import type { NextRequest } from 'next/server.js'
 

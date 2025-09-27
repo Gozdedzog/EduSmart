@@ -1,4 +1,4 @@
-// File: /Users/hilal/Desktop/MLProje/apps/web/src/app/sonuclar/page.tsx
+// File: /Users/hilal/Desktop/edusmart_27_09/apps/web/src/app/sonuclar/page.tsx
 import * as entry from '../../../../src/app/sonuclar/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
