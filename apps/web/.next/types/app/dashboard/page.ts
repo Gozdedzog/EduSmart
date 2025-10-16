@@ -1,4 +1,4 @@
-// File: /Users/hilal/Desktop/edusmart_27_09/apps/web/src/app/dashboard/page.tsx
+// File: /Users/hilal/Desktop/edu_smart/apps/web/src/app/dashboard/page.tsx
 import * as entry from '../../../../src/app/dashboard/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

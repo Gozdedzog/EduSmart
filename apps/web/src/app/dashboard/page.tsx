@@ -81,8 +81,15 @@ export default function DashboardPage() {
           });
           
           // Test sonuçlarını ML API formatına dönüştür
-          const videoAnswers = Array(30).fill(0).map((_, i) => i < videoScore ? 1 : 0);
-          const textAnswers = Array(30).fill(0).map((_, i) => i < textScore ? 1 : 0);
+          // Her soru için 0 veya 1 (test başarısına göre)
+          const videoAnswers = Array(30).fill(0).map((_, i) => {
+            // Video test başarı oranına göre 0 veya 1
+            return videoScore > 15 ? 1 : 0; // 15'ten fazla doğru cevap = 1, değilse 0
+          });
+          const textAnswers = Array(30).fill(0).map((_, i) => {
+            // Text test başarı oranına göre 0 veya 1
+            return textScore > 15 ? 1 : 0; // 15'ten fazla doğru cevap = 1, değilse 0
+          });
           
           console.log('🔄 ML API\'ye gönderilecek veriler:', {
             age: userAge,
@@ -98,7 +105,18 @@ export default function DashboardPage() {
               age: userAge,
               gender: userGender,
               video_answers: videoAnswers,
-              text_answers: textAnswers
+              text_answers: textAnswers,
+              time_video: videoTest?.time_spent || 300,
+              time_text: textTest?.time_spent || 600,
+              time_total: (videoTest?.time_spent || 300) + (textTest?.time_spent || 600),
+              video_easy: Math.min(Math.floor((videoScore || 0) * 0.3), 30),
+              video_medium: Math.min(Math.floor((videoScore || 0) * 0.4), 30),
+              video_hard: Math.min(Math.floor((videoScore || 0) * 0.3), 30),
+              text_easy: Math.min(Math.floor((textScore || 0) * 0.3), 30),
+              text_medium: Math.min(Math.floor((textScore || 0) * 0.4), 30),
+              text_hard: Math.min(Math.floor((textScore || 0) * 0.3), 30),
+              efficiency_video: (videoScore || 0) / ((videoTest?.time_spent || 300) / 60),
+              efficiency_text: (textScore || 0) / ((textTest?.time_spent || 600) / 60)
             });
             
             console.log('🎯 ML Model Tahmini:', prediction);
@@ -138,46 +156,11 @@ export default function DashboardPage() {
           } catch (mlError) {
             console.error('❌ ML Model Hatası:', mlError);
             
-            // ML modeli çalışmazsa fallback olarak basit hesaplama yap
-            let learningStyle = 'Karma';
-            let confidence = 0.5;
-            let recommendations: string[] = [];
-            
-            if (videoScore > textScore + 5) {
-              learningStyle = 'Görsel';
-              confidence = Math.min(0.8, (videoScore - textScore) / 30);
-              recommendations = [
-                'Video içerikleri tercih edin',
-                'Görsel öğrenme materyalleri kullanın',
-                'Animasyonlu içerikleri seçin'
-              ];
-            } else if (textScore > videoScore + 5) {
-              learningStyle = 'Yazılı';
-              confidence = Math.min(0.8, (textScore - videoScore) / 30);
-              recommendations = [
-                'Metin tabanlı içerikleri okuyun',
-                'Notlar alarak çalışın',
-                'Kitaplar ve makalelerden faydalanın'
-              ];
-            } else {
-              learningStyle = 'Karma';
-              confidence = 0.6;
-              recommendations = [
-                'Hem video hem de metin içeriklerini kullanın',
-                'Farklı öğrenme materyallerini birleştirin'
-              ];
-            }
-            
-            console.log('⚠️ Fallback Sonucu:', {
-              learningStyle,
-              confidence,
-              recommendations
-            });
-            
+            // ML modeli çalışmazsa hata göster
             setUserLearningStyle({
-              style: learningStyle,
-              confidence: confidence,
-              recommendations: recommendations
+              style: 'Bilinmiyor',
+              confidence: 0,
+              recommendations: ['ML modeli şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.']
             });
           }
         }
@@ -609,7 +592,7 @@ export default function DashboardPage() {
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-gray-900 mb-2">AI Analiz Yapalım!</h3>
                          <p className="text-gray-700 leading-relaxed">
-                           Size en uygun öğrenme yöntemini belirlemek için <strong className="gradient-text">Matematik</strong> ya da <strong className="gradient-text">Türkçe</strong> derslerinden birine ait <strong className="gradient-text">yazılı</strong> ve <strong className="gradient-text">videolu</strong> içerik sonrası testleri çözmeniz gerekiyor.
+                           Size en uygun öğrenme yöntemini belirlemek için önce <strong className="gradient-text">Matematik</strong> ya da <strong className="gradient-text">Türkçe</strong> derslerinden birine ait <strong className="gradient-text">yazılı</strong> ve <strong className="gradient-text">videolu</strong> içerikleri izleyin, ardından ilgili testleri çözün.
                          </p>
                         </div>
                       </div>

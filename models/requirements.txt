@@ -1,0 +1,37 @@
+########################################################
+# ML API + Model Training Dependencies
+# ------------------------------------------------------
+# FastAPI tabanlı Kişiselleştirilmiş Öğrenme Platformu
+# Python 3.10+ önerilir
+########################################################
+
+# Web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0   # ASGI server, production için önerilen extras ile
+
+# Veri işleme
+pandas==2.1.4
+numpy==1.24.3
+
+# Makine öğrenmesi
+scikit-learn==1.3.2
+xgboost==2.0.3
+joblib==1.3.2               # Model serileştirme ve yükleme
+
+# Açıklanabilir yapay zekâ (Explainability)
+shap==0.44.1
+matplotlib==3.8.2           # SHAP görselleştirme için şart
+
+# Veri doğrulama ve şema
+pydantic==2.5.0
+
+# Opsiyonel / performans
+python-multipart==0.0.6     # Form-data ve dosya upload desteği
+
+########################################################
+# Notes:
+# 1. Sanal ortam (venv veya poetry) kullanmanız önerilir.
+# 2. Üretim ortamında sadece API, ML ve SHAP paketleri gerekli olabilir.
+# 3. SHAP + matplotlib sadece model yorumlama ve görselleştirme için kullanılır.
+# 4. Kurulum: pip install -r requirements.txt
+########################################################

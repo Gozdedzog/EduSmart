@@ -5,7 +5,6 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HybridAuthProvider } from '@/context/HybridAuthProvider';
 import { LoadingBar } from '@/components/LoadingBar';
-import { MigrationScript } from '@/components/MigrationScript';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -21,6 +20,14 @@ export const metadata: Metadata = {
   title: 'Yapay Zekâ Destekli Kişiselleştirilmiş Öğrenme Platformu',
   description:
     'Yapay zekâ destekli kişiselleştirilmiş öğrenme deneyimi ile becerilerinizi geliştirin. İlerlemenizi takip edin, çeşitli içerikleri keşfedin ve öğrenme hedeflerinize ulaşın.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +41,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <HybridAuthProvider>
-          <MigrationScript />
           <LoadingBar />
           <Navbar />
           {/* removed legacy top panel */}

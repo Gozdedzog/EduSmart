@@ -1,0 +1,47 @@
+# EduSmart Platform - Development Docker Compose
+version: '3.8'
+
+services:
+  # Frontend Service (Development)
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+      target: deps
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_ML_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    volumes:
+      - ./apps/web:/app
+      - /app/node_modules
+      - /app/.next
+    command: pnpm dev
+    networks:
+      - edusmart-dev-network
+
+  # Backend API Service (Development)
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - ML_MODEL_PATH=./data/best_learning_model_full.joblib
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./apps/api:/app
+      - ./data:/app/data:ro
+      - ./logs:/app/logs
+    command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - edusmart-dev-network
+
+networks:
+  edusmart-dev-network:
+    driver: bridge

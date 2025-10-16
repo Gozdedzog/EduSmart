@@ -1,12 +1,11 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/users/route": "app/api/users/route.js",
   "/api/courses/route": "app/api/courses/route.js",
   "/api/egitim-gecmisi/route": "app/api/egitim-gecmisi/route.js",
   "/api/test-sonuclari/route": "app/api/test-sonuclari/route.js",
+  "/page": "app/page.js",
+  "/admin/page": "app/admin/page.js",
   "/auth/login/page": "app/auth/login/page.js",
-  "/auth/signup/page": "app/auth/signup/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/icerikler/page": "app/icerikler/page.js",
-  "/sonuclar/page": "app/sonuclar/page.js",
-  "/page": "app/page.js"
+  "/icerikler/page": "app/icerikler/page.js"
 }

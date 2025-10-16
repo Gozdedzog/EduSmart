@@ -585,7 +585,7 @@ export default function ContentDisplayModal({
           onClick={onClose}
         ></div>
 
-        <div className="relative bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[95vh] overflow-y-auto">
+        <div className={`relative bg-white rounded-lg shadow-xl ${content.type === 'ARTICLE' ? 'max-w-7xl w-full max-h-[98vh]' : 'max-w-6xl w-full max-h-[95vh]'} overflow-y-auto`}>
           {/* Header */}
           <div className="sticky top-0 bg-white border-b px-6 py-4 rounded-t-lg">
             <div className="flex items-center justify-between">
@@ -672,7 +672,7 @@ export default function ContentDisplayModal({
             )}
 
               {content && content.type === 'ARTICLE' && (
-              <div className="prose max-w-none text-slate-700 space-y-4 px-8 py-6">
+              <div className="prose max-w-none text-slate-700 space-y-4 px-12 py-8">
                 <h3 className="text-lg font-semibold text-slate-900 mb-4">
                   {content.title} - Yazılı İçerik
                 </h3>

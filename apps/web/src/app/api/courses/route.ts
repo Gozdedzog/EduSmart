@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const COURSES_FILE = path.join(process.cwd(), '..', '..', 'egitim-verileri.json');
+const COURSES_FILE = path.join(process.cwd(), '..', '..', 'data', 'egitim-verileri.json');
 
 // GET - Tüm eğitimleri getir
 export async function GET() {

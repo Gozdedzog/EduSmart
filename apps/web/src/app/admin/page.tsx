@@ -214,8 +214,8 @@ export default function AdminPage() {
     <RequireAdmin>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50">
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="px-4 py-6 sm:px-0">
-            <div className="flex justify-between items-center mb-8">
+          <div className="px-4 pt-16 pb-6 sm:px-0">
+            <div className="mb-8">
               <div>
                 <h1 className="text-4xl font-bold">
                   <span className="gradient-text">Admin Panel</span>
@@ -223,17 +223,6 @@ export default function AdminPage() {
                 <p className="text-slate-600 mt-2">
                   Kullanıcı ve eğitim yönetimi
                 </p>
-              </div>
-              <div className="flex space-x-4">
-                <span className="text-sm text-gray-500">
-                  Hoş geldin, {currentUser?.firstName && currentUser?.lastName 
-                    ? `${currentUser.firstName} ${currentUser.lastName}`.trim()
-                    : currentUser?.user_metadata?.full_name || currentUser?.email?.split('@')[0]
-                  }
-                </span>
-                <Button onClick={handleLogout} variant="outline">
-                  Çıkış Yap
-                </Button>
               </div>
             </div>
 
@@ -491,22 +480,6 @@ export default function AdminPage() {
                     </div>
                   </div>
                   <div className="flex space-x-3">
-                    <Button 
-                      onClick={refreshTestsData} 
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300"
-                      size="sm"
-                      disabled={loading}
-                    >
-                      {loading ? 'Yenileniyor...' : '🔄 Yenile'}
-                    </Button>
-                    <Button 
-                      onClick={reloadTestsData} 
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-md hover:shadow-lg transition-all duration-300"
-                      size="sm"
-                      disabled={loading}
-                    >
-                      🔄 Sıfırla
-                    </Button>
                     <Button 
                       onClick={() => setShowAddTest(true)}
                       className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-3"

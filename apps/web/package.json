@@ -1,7 +1,10 @@
 {
-  "name": "@smart-learn/web",
-  "version": "0.1.0",
+  "name": "@edusmart/web",
+  "version": "1.0.0",
   "private": true,
+  "description": "EduSmart - AI-powered personalized learning platform frontend",
+  "author": "EduSmart Team",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +13,12 @@
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "analyze": "cross-env ANALYZE=true next build",
+    "clean": "rm -rf .next out dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -25,8 +33,10 @@
     "@types/nprogress": "^0.2.3",
     "@types/youtube": "^0.1.2",
     "@uiw/react-md-editor": "^4.0.8",
+    "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "critters": "^0.0.25",
     "lucide-react": "^0.542.0",
     "next": "15.5.2",
     "nprogress": "^0.2.0",
@@ -37,7 +47,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.14",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

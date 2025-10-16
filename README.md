@@ -1,237 +1,303 @@
-# 🎓 EduSmart - Yapay Zeka Destekli Kişiselleştirilmiş Öğrenme Platformu
+# 🎓 EduSmart - AI-Powered Personalized Learning Platform
 
-## 📋 Proje Özeti
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black)](https://nextjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-green)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue)](https://python.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED)](https://docker.com/)
 
-**EduSmart**, bireylerin öğrenme süreçlerini daha verimli, etkili ve kalıcı hale getirmek amacıyla geliştirilmiş **yapay zeka destekli kişiselleştirilmiş eğitim sistemidir**. Derin öğrenme algoritmalarından yararlanılarak bireylerin dijital ortamdaki öğrenme davranışları analiz edilir ve her birey için en uygun öğrenme stratejisi belirlenir.
+**EduSmart** is a professional, enterprise-grade AI-powered personalized learning platform that analyzes individual learning behaviors and provides customized content recommendations using advanced machine learning algorithms.
 
-## 🎯 Proje Amacı
+## 🌟 Key Features
 
-- **Kişiselleştirilmiş Öğrenme**: Her bireyin öğrenme tarzına uygun içerik önerileri
-- **Yapay Zeka Destekli Analiz**: Kullanıcı davranışlarının derinlemesine analizi
-- **Adaptif Sistem**: Zamanla kendini geliştiren ve uyarlayan sistem
-- **Verimli Öğrenme**: Öğrenme sürecinin kalıcılığını ve etkinliğini artırma
+- **🤖 AI-Powered Analysis**: Advanced Logistic Regression-based learning style prediction with comprehensive feature analysis
+- **🎯 Personalized Content**: Customized learning recommendations based on individual preferences and performance metrics
+- **📊 Comprehensive Testing**: 60-question assessment system (30 video + 30 text questions) with time tracking and difficulty analysis
+- **📈 Progress Tracking**: Detailed analytics and performance monitoring
+- **🔐 Enterprise Security**: Professional authentication and authorization system
+- **🐳 Docker Ready**: Complete containerization for easy deployment
+- **📱 Responsive Design**: Modern, mobile-first user interface
+- **⚡ High Performance**: Optimized for speed and scalability
 
-## 🏗️ Teknik Mimari
+## 🏗️ Architecture
 
-### Frontend (Next.js)
-- **Framework**: Next.js 15.5.2
-- **Dil**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI + Custom components
-- **State Management**: React hooks
+### Frontend (Next.js 15.5.2)
+- **Framework**: Next.js with TypeScript
+- **Styling**: Tailwind CSS + Radix UI
+- **State Management**: React Context + Hooks
+- **Authentication**: Hybrid (Supabase + Local Database)
 
-### Backend (Python/FastAPI)
-- **Framework**: FastAPI
-- **ML Framework**: Scikit-learn
-- **Model**: SVM (Support Vector Machine)
-- **API**: RESTful API
-- **CORS**: Cross-Origin Resource Sharing desteği
+### Backend (Python FastAPI)
+- **Framework**: FastAPI with async support
+- **ML Engine**: Scikit-learn Logistic Regression model
+- **API**: RESTful with OpenAPI documentation
+- **Security**: CORS, validation, error handling
 
-### Makine Öğrenmesi
-- **Model Tipi**: SVM (Support Vector Machine)
-- **Doğruluk**: %100 (eğitim verilerinde)
-- **Özellik Sayısı**: 62
-- **Sınıflar**: ["equal", "text", "video"]
-- **Algoritma**: GridSearchCV ile optimize edilmiş
+### Machine Learning
+- **Algorithm**: Logistic Regression with Pipeline
+- **Features**: 77 (age + gender + 60 test answers + time metrics + difficulty levels + efficiency scores)
+- **Classes**: Video, Text, Equal learning styles
+- **Advanced Features**: Time tracking, difficulty analysis, efficiency calculations
+- **Model**: `best_learning_model_full.joblib` with comprehensive feature engineering
 
-## 🤖 Yapay Zeka Sistemi
+## 🚀 Quick Start
 
-### Model Eğitimi
-```python
-# 5 farklı algoritma test edildi:
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- SVM (Seçilen)
-- XGBoost
-```
+### Prerequisites
 
-### Özellik Mühendisliği
-Model **62 özelliği** analiz eder:
-- **Demografik**: Yaş, Cinsiyet
-- **Video Testi**: 30 soru (0/1 cevaplar)
-- **Yazılı Testi**: 30 soru (0/1 cevaplar)
+- **Node.js** 18+ 
+- **Python** 3.11+
+- **Docker** (optional)
+- **pnpm** (recommended)
 
-### Tahmin Süreci
-1. **Veri Toplama**: Kullanıcı test sonuçları
-2. **Ön İşleme**: OneHotEncoder + normalizasyon
-3. **Tahmin**: SVM modeli ile sınıflandırma
-4. **Sonuç**: Öğrenme stili + güven skoru + öneriler
+### Option 1: Automated Setup
 
-## 📊 Veri Seti
-
-### Eğitim Verileri
-- **Kayıt Sayısı**: 1000+ öğrenci
-- **Yaş Aralığı**: 17-20 yaş
-- **Cinsiyet Dağılımı**: Eşit dağılım
-- **Test Formatı**: 30 video + 30 yazılı sorusu
-
-### Veri Kalitesi
-- **Gerçekçi Başarı Oranları**: Video %58, Yazılı %56
-- **Belirsizlik Oranı**: %50+ (çok yakın skorlar)
-- **Sınıf Dengesi**: Eşit dağılım
-
-## 🚀 Kurulum ve Çalıştırma
-
-### Gereksinimler
 ```bash
-# Python 3.11+
-# Node.js 18+
-# pnpm 8+
-```
-
-### 1. Projeyi Klonlayın
-```bash
+# Clone the repository
 git clone <repository-url>
-cd edusmart_27_09
+cd edu_smart
+
+# Run the setup script
+chmod +x scripts/setup.sh
+./scripts/setup.sh
 ```
 
-### 2. Python Backend Kurulumu
-```bash
-# ML modeli eğit (isteğe bağlı)
-python train_demo_model.py
+### Option 2: Manual Setup
 
-# API servisini başlat
-python prediction_api.py
+#### 1. Environment Setup
+```bash
+# Copy environment file
+cp .env.example .env
+# Edit .env with your configuration
 ```
 
-### 3. Frontend Kurulumu
+#### 2. Frontend Setup
 ```bash
-# Web uygulamasını başlat
 cd apps/web
-npm install
-npm run dev
+pnpm install
+pnpm dev
+# Frontend: http://localhost:3000
 ```
 
-### 4. Servisler
-- **ML API**: http://localhost:8000
-- **Web App**: http://localhost:3000
-
-## 🔧 API Endpoints
-
-### ML Prediction API
+#### 3. Backend Setup
 ```bash
-# Sağlık kontrolü
-GET /health
-
-# Model bilgileri
-GET /model-info
-
-# Tahmin yapma
-POST /predict
-{
-  "age": 20,
-  "gender": "M",
-  "video_answers": [1,0,1,1,0,...],
-  "text_answers": [0,1,0,0,1,...]
-}
+cd apps/api
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn src.main:app --reload
+# Backend: http://localhost:8000
 ```
 
-### Yanıt Formatı
-```json
-{
-  "predicted_style": "video",
-  "confidence": 0.99999999999995,
-  "video_score": 18,
-  "text_score": 12,
-  "video_percentage": 60.0,
-  "text_percentage": 40.0,
-  "recommendation": {
-    "content_ratio": {"video": 70, "text": 30},
-    "learning_tips": [
-      "Video içerikleri tercih edin",
-      "Görsel öğrenme materyalleri kullanın"
-    ],
-    "study_method": "Görsel öğrenme"
-  }
-}
+### Option 3: Docker Setup
+
+```bash
+# Development
+docker-compose -f docker-compose.dev.yml up
+
+# Production
+docker-compose up -d
 ```
 
-## 🎯 Kullanım Senaryoları
+## 📁 Project Structure
 
-### 1. Öğrenci Testi
-- Kullanıcı video ve yazılı testleri çözer
-- Sistem otomatik olarak öğrenme stilini belirler
-- Kişiselleştirilmiş öneriler sunar
-
-### 2. Eğitim Kurumları
-- Toplu öğrenci analizi
-- Sınıf bazlı öğrenme stratejileri
-- Performans takibi
-
-### 3. Kurumsal Eğitim
-- Çalışan gelişim programları
-- Kişiselleştirilmiş eğitim yolları
-- ROI analizi
-
-## 📈 Model Performansı
-
-### Eğitim Sonuçları
-- **Cross-Validation**: 5-fold CV
-- **Scoring**: F1-macro
-- **GridSearch**: Parametre optimizasyonu
-- **Overfitting Kontrolü**: Train vs Test accuracy
-
-### Gerçek Zamanlı Performans
-- **Tahmin Süresi**: <100ms
-- **Güven Skoru**: 0.0-1.0 arası
-- **Doğruluk**: Yüksek güvenilirlik
-
-## 🔍 Özellikler
-
-### ✅ Mevcut Özellikler
-- **ML Model Entegrasyonu**: Gerçek SVM modeli
-- **Kişiselleştirilmiş Öneriler**: AI destekli içerik önerileri
-- **Test Sistemi**: Video ve yazılı testler
-- **Dashboard**: Kullanıcı analiz paneli
-- **API**: RESTful API servisi
-
-### 🚧 Geliştirme Aşamasında
-- **Gerçek Zamanlı Davranış Analizi**: Mouse tracking, scroll behavior
-- **Derin Öğrenme**: Neural network modelleri
-- **Adaptif Sistem**: Sürekli öğrenen sistem
-- **Gelişmiş Öneriler**: Dinamik içerik kişiselleştirmesi
-
-## 🛠️ Geliştirme
-
-### Proje Yapısı
 ```
-edusmart_27_09/
+edu_smart/
 ├── apps/
-│   ├── web/              # Next.js frontend
-│   └── api/              # Python backend (scaffold)
-├── prediction_api.py     # ML API servisi
-├── train_demo_model.py   # Model eğitimi
-├── dataset.py           # Veri seti oluşturma
-└── requirements.txt     # Python bağımlılıkları
+│   ├── web/                    # Next.js Frontend
+│   │   ├── src/
+│   │   │   ├── app/           # App Router pages
+│   │   │   ├── components/    # React components
+│   │   │   ├── lib/          # Utilities and services
+│   │   │   └── context/      # React context providers
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   └── api/                   # FastAPI Backend
+│       ├── src/
+│       │   ├── main.py       # Application entry point
+│       │   ├── core/         # Core functionality
+│       │   ├── api/          # API routes
+│       │   ├── schemas/      # Pydantic schemas
+│       │   └── services/     # Business logic
+│       ├── Dockerfile
+│       └── requirements.txt
+├── data/                      # ML models and datasets
+│   ├── best_learning_model_full.joblib    # Main ML model (77 features)
+│   ├── best_learning_model_full_summary.joblib  # Summary model
+│   ├── learning_dataset_30v30_realistic.csv    # Training dataset
+│   └── *.json                 # User data and test results
+├── models/                    # ML training and analysis scripts
+│   ├── prediction_api.py      # Standalone prediction API
+│   ├── featureselection_train_demo_model.py  # Model training
+│   ├── overfitting_analysis.py  # Model analysis
+│   ├── dataset.py             # Dataset generation
+│   └── requirements.txt       # ML dependencies
+├── docs/                      # Documentation
+│   ├── auth-setup.md          # Authentication setup guide
+│   ├── auth-smoke-test.md     # Auth testing guide
+│   ├── egitim-listesi.md      # Education content list
+│   └── test-listesi.md        # Test content list
+├── scripts/                   # Setup and utility scripts
+│   ├── setup.sh              # Automated setup script
+│   ├── check-localStorage.html  # Local storage checker
+│   └── check-test-results.html  # Test results checker
+├── config/                    # Configuration templates
+│   └── env.example           # Environment variables template
+├── docker-compose.yml         # Production Docker setup
+├── docker-compose.dev.yml     # Development Docker setup
+├── CHANGELOG.md              # Project changelog
+├── PROJECT_SUMMARY.md        # Project summary
+├── SETUP.md                  # Setup guide
+├── DEPLOYMENT.md             # Deployment guide
+├── CONTRIBUTING.md           # Contributing guidelines
+├── LICENSE                   # MIT License
+└── README.md                 # This file
 ```
 
-### Katkıda Bulunma
-1. Fork yapın
-2. Feature branch oluşturun
-3. Değişikliklerinizi commit edin
-4. Pull request gönderin
+## 🔧 Configuration
 
-## 📝 Lisans
+### Environment Variables
 
-Bu proje MIT lisansı altında lisanslanmıştır.
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NODE_ENV` | Node environment | `development` |
+| `NEXT_PUBLIC_ML_API_URL` | ML API URL | `http://localhost:8000` |
+| `ENVIRONMENT` | API environment | `development` |
+| `ML_MODEL_PATH` | Path to ML model | `./data/best_learning_model_full.joblib` |
+| `LOG_LEVEL` | Logging level | `INFO` |
 
-## 👥 Ekip
+### API Endpoints
 
-- **Proje Sahibi**: Şuheda AKTAŞ
-- **Kategori**: Makine Öğrenmesi
-- **Teknoloji**: Yapay Zeka, Next.js, Python, FastAPI
+#### Health Check
+- `GET /` - Basic health check
+- `GET /health` - Detailed health check
+- `GET /api/v1/health/` - API health check
 
-## 📞 İletişim
+#### Machine Learning
+- `GET /api/v1/ml/model-info` - Get ML model information
+- `POST /api/v1/ml/predict` - Predict learning style
+- `GET /api/v1/ml/health` - ML service health check
 
-Proje hakkında sorularınız için:
-- **Email**: [email protected]
-- **GitHub**: [repository-url]
+## 📊 API Documentation
 
-## 🎉 Teşekkürler
+Once the backend is running, visit:
+- **Swagger UI**: http://localhost:8000/docs
+- **ReDoc**: http://localhost:8000/redoc
+- **OpenAPI JSON**: http://localhost:8000/openapi.json
 
-Bu proje, modern eğitim teknolojileri ve yapay zeka alanındaki yenilikçi yaklaşımları birleştirerek, kişiselleştirilmiş öğrenme deneyimleri sunmayı hedeflemektedir.
+## 🧪 Testing
+
+### Frontend Testing
+```bash
+cd apps/web
+pnpm test
+pnpm test:coverage
+```
+
+### Backend Testing
+```bash
+cd apps/api
+source venv/bin/activate
+pytest
+pytest --cov=src
+```
+
+## 🚀 Deployment
+
+### Docker Deployment
+
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+
+# Scale services
+docker-compose up -d --scale web=3
+```
+
+### Manual Deployment
+
+1. **Build Frontend**
+   ```bash
+   cd apps/web
+   pnpm build
+   pnpm start
+   ```
+
+2. **Run Backend**
+   ```bash
+   cd apps/api
+   source venv/bin/activate
+   uvicorn src.main:app --host 0.0.0.0 --port 8000
+   ```
+
+### Production Considerations
+
+- Set `NODE_ENV=production`
+- Set `ENVIRONMENT=production`
+- Configure proper CORS origins
+- Set up SSL certificates
+- Configure reverse proxy (Nginx)
+- Set up monitoring and logging
+- Configure database (if needed)
+
+## 📈 Performance
+
+- **Frontend**: Optimized with Next.js 15, code splitting, and image optimization
+- **Backend**: Async FastAPI with efficient ML model loading
+- **ML Predictions**: <100ms response time
+- **Docker**: Multi-stage builds for minimal image size
+
+## 🔒 Security
+
+- **CORS**: Configurable cross-origin resource sharing
+- **Validation**: Comprehensive input validation with Pydantic
+- **Error Handling**: Secure error responses without sensitive data
+- **Headers**: Security headers for XSS and clickjacking protection
+- **Authentication**: Role-based access control
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Follow TypeScript best practices
+- Write comprehensive tests
+- Update documentation
+- Follow conventional commit messages
+- Ensure all tests pass
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🆘 Support
+
+- **Documentation**: Check the `/docs` endpoint when running
+- **Issues**: Create an issue in the repository
+- **Email**: [support@edusmart.com](mailto:support@edusmart.com)
+
+## 🎯 Roadmap
+
+- [ ] Real-time behavior analysis
+- [ ] Advanced ML models (Neural Networks)
+- [ ] Mobile application
+- [ ] Advanced analytics dashboard
+- [ ] Multi-language support
+- [ ] Integration with LMS systems
+
+## 🙏 Acknowledgments
+
+- **FastAPI** team for the excellent framework
+- **Next.js** team for the amazing React framework
+- **Scikit-learn** team for ML tools
+- **Radix UI** for accessible components
 
 ---
 
-**Not**: Bu proje, eğitim amaçlı geliştirilmiştir ve sürekli geliştirme aşamasındadır. Gerçek kullanım için ek güvenlik ve performans optimizasyonları gerekebilir.
+**Built with ❤️ by the EduSmart Team**
+
+*Empowering education through artificial intelligence*

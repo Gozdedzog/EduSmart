@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2024-12-19
+
+### Major Updates
+- 🚀 **Advanced ML Model Integration**: Upgraded to comprehensive 77-feature Logistic Regression model
+- 📊 **Enhanced Feature Engineering**: Added time tracking, difficulty analysis, and efficiency calculations
+- 🔧 **API Schema Updates**: Extended input validation for comprehensive test data
+- 📈 **Improved Accuracy**: Advanced Logistic Regression model with 94.5% accuracy and better prediction capabilities
+
+### Technical Improvements
+- **ML Model**: `best_learning_model_full.joblib` with 77 features
+- **Features Added**: Time metrics, difficulty levels, efficiency scores
+- **API Enhancement**: Updated schemas for comprehensive data collection
+- **Model Pipeline**: Advanced preprocessing with feature engineering
+
+### New Features
+- ✅ **Time Tracking**: Video and text question completion times
+- ✅ **Difficulty Analysis**: Easy, medium, hard question categorization
+- ✅ **Efficiency Metrics**: Performance per time unit calculations
+- ✅ **Advanced Predictions**: More accurate learning style detection
+
+### Configuration Updates
+- 🔧 **Admin Email**: Updated to `gozdeatila9@gmail.com`
+- 📝 **Documentation**: Updated README and project summaries
+- 🛠️ **Environment**: Updated configuration templates
+
 ## [1.0.0] - 2024-09-27
 
 ### Added

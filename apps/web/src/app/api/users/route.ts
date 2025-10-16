@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const USERS_FILE = path.join(process.cwd(), '..', '..', 'kullanici-verileri.json');
+const USERS_FILE = path.join(process.cwd(), '..', '..', 'data', 'kullanici-verileri.json');
 
 // GET - Tüm kullanıcıları getir
 export async function GET() {

@@ -10,6 +10,17 @@ export interface TestResults {
   gender: string;
   video_answers: number[];
   text_answers: number[];
+  time_video: number;
+  time_text: number;
+  time_total: number;
+  video_easy: number;
+  video_medium: number;
+  video_hard: number;
+  text_easy: number;
+  text_medium: number;
+  text_hard: number;
+  efficiency_video: number;
+  efficiency_text: number;
 }
 
 export interface PredictionResponse {
@@ -60,7 +71,7 @@ export async function checkApiHealth(): Promise<HealthResponse> {
  */
 export async function getModelInfo(): Promise<ModelInfoResponse> {
   try {
-    const response = await fetch(`${API_BASE_URL}/model-info`);
+    const response = await fetch(`${API_BASE_URL}/api/v1/ml/model-info`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -76,7 +87,7 @@ export async function getModelInfo(): Promise<ModelInfoResponse> {
  */
 export async function predictLearningStyle(testResults: TestResults): Promise<PredictionResponse> {
   try {
-    const response = await fetch(`${API_BASE_URL}/predict`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/ml/predict`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

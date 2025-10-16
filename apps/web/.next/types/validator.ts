@@ -95,12 +95,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/dashboard">
 }
 
-// Validate ../../src/app/debug-courses/page.tsx
-{
-  const handler = {} as typeof import("../../src/app/debug-courses/page.js")
-  handler satisfies AppPageConfig<"/debug-courses">
-}
-
 // Validate ../../src/app/gizlilik/page.tsx
 {
   const handler = {} as typeof import("../../src/app/gizlilik/page.js")
@@ -131,12 +125,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   handler satisfies AppPageConfig<"/kullanim-kosullari">
 }
 
-// Validate ../../src/app/lab/page.tsx
-{
-  const handler = {} as typeof import("../../src/app/lab/page.js")
-  handler satisfies AppPageConfig<"/lab">
-}
-
 // Validate ../../src/app/ogrenme/page.tsx
 {
   const handler = {} as typeof import("../../src/app/ogrenme/page.js")
@@ -159,12 +147,6 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   const handler = {} as typeof import("../../src/app/sonuclar/page.js")
   handler satisfies AppPageConfig<"/sonuclar">
-}
-
-// Validate ../../src/app/test-json/page.tsx
-{
-  const handler = {} as typeof import("../../src/app/test-json/page.js")
-  handler satisfies AppPageConfig<"/test-json">
 }
 
 // Validate ../../src/app/testler/page.tsx

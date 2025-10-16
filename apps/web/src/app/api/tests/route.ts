@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const TESTS_FILE = path.join(process.cwd(), '..', '..', 'test-verileri.json');
+const TESTS_FILE = path.join(process.cwd(), '..', '..', 'data', 'test-verileri.json');
 
 // GET - Tüm testleri getir
 export async function GET() {
