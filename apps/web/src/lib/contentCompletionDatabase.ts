@@ -143,7 +143,7 @@ export const getTestAccessStatus = (userId: string, relatedContentId: string): {
   if (canAccess) {
     return {
       canAccess: true,
-      progress,
+      progress: progress || undefined,
       message: 'Teste erişebilirsiniz'
     };
   }

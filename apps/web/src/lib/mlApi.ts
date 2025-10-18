@@ -121,6 +121,17 @@ export function formatTestResultsForApi(
     gender,
     video_answers: videoAnswers,
     text_answers: textAnswers,
+    time_video: 0,
+    time_text: 0,
+    time_total: 0,
+    video_easy: 0,
+    video_medium: 0,
+    video_hard: 0,
+    text_easy: 0,
+    text_medium: 0,
+    text_hard: 0,
+    efficiency_video: 0,
+    efficiency_text: 0,
   };
 }
 

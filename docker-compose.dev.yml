@@ -1,5 +1,4 @@
 # EduSmart Platform - Development Docker Compose
-version: '3.8'
 
 services:
   # Frontend Service (Development)
@@ -14,13 +13,26 @@ services:
       - NODE_ENV=development
       - NEXT_PUBLIC_ML_API_URL=http://localhost:8000
       - NEXT_PUBLIC_APP_URL=http://localhost:3000
+    # env_file:
+    #   - .env
+    #   - .env.local
     volumes:
+      # Bind mount source code for live reload
       - ./apps/web:/app
       - /app/node_modules
       - /app/.next
+      # Persistent data directories
+      - ./apps/web/data:/app/data
+      - ./data:/data
     command: pnpm dev
     networks:
       - edusmart-dev-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   # Backend API Service (Development)
   api:
@@ -34,13 +46,23 @@ services:
       - DEBUG=true
       - ML_MODEL_PATH=./data/best_learning_model_full.joblib
       - LOG_LEVEL=DEBUG
+    # env_file:
+    #   - .env
     volumes:
+      # Bind mount source code for live reload
       - ./apps/api:/app
+      # Persistent data directories
       - ./data:/app/data:ro
-      - ./logs:/app/logs
+      - ./apps/api/logs:/app/logs
     command: uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
     networks:
       - edusmart-dev-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
 networks:
   edusmart-dev-network:

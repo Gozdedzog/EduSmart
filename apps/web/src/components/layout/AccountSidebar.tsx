@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { useAuth } from '@/context/AuthProvider';
+import { useAuth } from '@/context/HybridAuthProvider';
 import { Button } from '@/components/ui/button';
 import { useSidebar } from '@/hooks/useSidebar';
 

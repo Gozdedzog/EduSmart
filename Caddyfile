@@ -1,0 +1,73 @@
+# EduSmart Platform - Caddy Reverse Proxy Configuration
+# Main domain for frontend
+edusmart.tr {
+    # Frontend (Next.js)
+    reverse_proxy web:3000
+    
+    # Enable automatic HTTPS
+    tls {
+        # Use Let's Encrypt for automatic SSL certificates
+    }
+    
+    # Security headers
+    header {
+        # Enable HSTS
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        
+        # Prevent clickjacking
+        X-Frame-Options "DENY"
+        
+        # Prevent MIME type sniffing
+        X-Content-Type-Options "nosniff"
+        
+        # XSS protection
+        X-XSS-Protection "1; mode=block"
+        
+        # Referrer policy
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+    
+    # Logging
+    log {
+        output file /var/log/caddy/access.log
+        format json
+    }
+}
+
+# API subdomain for ML API
+api.edusmart.tr {
+    # Backend API
+    reverse_proxy api:8000
+    
+    # Enable automatic HTTPS
+    tls {
+        # Use Let's Encrypt for automatic SSL certificates
+    }
+    
+    # Security headers
+    header {
+        # Enable HSTS
+        Strict-Transport-Security "max-age=31536000; includeSubDomains"
+        
+        # CORS headers for API
+        Access-Control-Allow-Origin "https://edusmart.tr"
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type, Authorization"
+    }
+    
+    # Logging
+    log {
+        output file /var/log/caddy/api.log
+        format json
+    }
+}
+
+# Redirect HTTP to HTTPS for main domain
+http://edusmart.tr {
+    redir https://edusmart.tr{uri} permanent
+}
+
+# Redirect HTTP to HTTPS for API subdomain
+http://api.edusmart.tr {
+    redir https://api.edusmart.tr{uri} permanent
+}

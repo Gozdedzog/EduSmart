@@ -58,11 +58,11 @@ function extractContentFromHTML(html: string) {
   
   // Önce main, article, veya content class'ı olan elementleri ara
   const mainSelectors = [
-    /<main[^>]*>(.*?)<\/main>/is,
-    /<article[^>]*>(.*?)<\/article>/is,
-    /<div[^>]*class=["'][^"']*content[^"']*["'][^>]*>(.*?)<\/div>/is,
-    /<div[^>]*class=["'][^"']*main[^"']*["'][^>]*>(.*?)<\/div>/is,
-    /<div[^>]*class=["'][^"']*post[^"']*["'][^>]*>(.*?)<\/div>/is,
+    /<main[^>]*>([\s\S]*?)<\/main>/i,
+    /<article[^>]*>([\s\S]*?)<\/article>/i,
+    /<div[^>]*class=["'][^"']*content[^"']*["'][^>]*>([\s\S]*?)<\/div>/i,
+    /<div[^>]*class=["'][^"']*main[^"']*["'][^>]*>([\s\S]*?)<\/div>/i,
+    /<div[^>]*class=["'][^"']*post[^"']*["'][^>]*>([\s\S]*?)<\/div>/i,
   ];
 
   for (const selector of mainSelectors) {
@@ -75,7 +75,7 @@ function extractContentFromHTML(html: string) {
 
   // Eğer ana içerik bulunamazsa, body'den çıkar
   if (!mainContent) {
-    const bodyMatch = html.match(/<body[^>]*>(.*?)<\/body>/is);
+    const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
     if (bodyMatch) {
       mainContent = bodyMatch[1];
     }
@@ -93,12 +93,12 @@ function extractContentFromHTML(html: string) {
 
 function cleanHTML(html: string): string {
   // HTML tag'lerini kaldır
-  let text = html.replace(/<script[^>]*>.*?<\/script>/gis, '');
-  text = text.replace(/<style[^>]*>.*?<\/style>/gis, '');
-  text = text.replace(/<nav[^>]*>.*?<\/nav>/gis, '');
-  text = text.replace(/<header[^>]*>.*?<\/header>/gis, '');
-  text = text.replace(/<footer[^>]*>.*?<\/footer>/gis, '');
-  text = text.replace(/<aside[^>]*>.*?<\/aside>/gis, '');
+  let text = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
+  text = text.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+  text = text.replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '');
+  text = text.replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '');
+  text = text.replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '');
+  text = text.replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '');
   
   // Diğer HTML tag'lerini kaldır
   text = text.replace(/<[^>]+>/g, '');
@@ -116,7 +116,7 @@ function cleanHTML(html: string): string {
   text = text.replace(/\n\s*\n/g, '\n\n');
   
   // Başlık ve açıklama kısımlarını temizle
-  text = text.replace(/^.*?(?=Trigonometrik Fonksiyonlar)/s, '');
+  text = text.replace(/^[\s\S]*?(?=Trigonometrik Fonksiyonlar)/, '');
   
   return text.trim();
 }

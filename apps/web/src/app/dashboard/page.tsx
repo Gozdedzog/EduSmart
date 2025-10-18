@@ -106,17 +106,17 @@ export default function DashboardPage() {
               gender: userGender,
               video_answers: videoAnswers,
               text_answers: textAnswers,
-              time_video: videoTest?.time_spent || 300,
-              time_text: textTest?.time_spent || 600,
-              time_total: (videoTest?.time_spent || 300) + (textTest?.time_spent || 600),
+              time_video: videoTest?.timeSpent || 300,
+              time_text: textTest?.timeSpent || 600,
+              time_total: (videoTest?.timeSpent || 300) + (textTest?.timeSpent || 600),
               video_easy: Math.min(Math.floor((videoScore || 0) * 0.3), 30),
               video_medium: Math.min(Math.floor((videoScore || 0) * 0.4), 30),
               video_hard: Math.min(Math.floor((videoScore || 0) * 0.3), 30),
               text_easy: Math.min(Math.floor((textScore || 0) * 0.3), 30),
               text_medium: Math.min(Math.floor((textScore || 0) * 0.4), 30),
               text_hard: Math.min(Math.floor((textScore || 0) * 0.3), 30),
-              efficiency_video: (videoScore || 0) / ((videoTest?.time_spent || 300) / 60),
-              efficiency_text: (textScore || 0) / ((textTest?.time_spent || 600) / 60)
+              efficiency_video: (videoScore || 0) / ((videoTest?.timeSpent || 300) / 60),
+              efficiency_text: (textScore || 0) / ((textTest?.timeSpent || 600) / 60)
             });
             
             console.log('🎯 ML Model Tahmini:', prediction);

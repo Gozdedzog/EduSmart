@@ -1,0 +1,52 @@
+{
+  "egitimler": [
+    {
+      "id": "1",
+      "title": "TEMEL KAVRAMLAR",
+      "description": "Bu içerikte matematiğin temel kavramlarını öğrenecek, sayılar, işlemler, semboller ve temel kurallarla ilgili bilgilerinizi pekiştireceksiniz.",
+      "type": "VIDEO",
+      "category": "Matematik",
+      "content": "https://www.youtube.com/watch?v=6K7SJHHDdpM",
+      "duration": 10,
+      "isPublished": true,
+      "authorId": "admin"
+    },
+    {
+      "id": "2",
+      "title": "NOKTALAMA İŞARETLERİ",
+      "description": "Bu videoyu izleyerek noktalama işaretleri konusundaki birçok önemli kavramı anlayacaksınız. Nokta, virgül, noktalı virgül, ünlem işareti, üç nokta, parantez, soru işareti, kısa ve uzun çizgi gibi birçok konuyu hızlı ve anlaşılır bir şekilde anlatmayı hedefledik.",
+      "type": "VIDEO",
+      "category": "Türkçe",
+      "content": "https://www.youtube.com/watch?v=DedyiW2jRZs",
+      "duration": 10,
+      "isPublished": true,
+      "authorId": "admin"
+    },
+    {
+      "id": "3",
+      "title": "NOKTALAMA İŞARETLERİ",
+      "description": "Bu yazılı içerikte noktalama işaretlerinin kullanımını öğrenecek, cümlelerin doğru ve anlaşılır olmasını sağlayan temel kuralları keşfedeceksiniz.",
+      "type": "ARTICLE",
+      "category": "Türkçe",
+      "content": "NOKTALAMA İŞARETLERİ\n\n\n\nNoktalama işaretleri; duygu ve düşünceleri açık ifade etmek, cümlenin yapısını ve duraklamaları göstermek, okumayı/anlamayı kolaylaştırmak ve vurgu-tonu belirtmek için kullanılır. Nokta, virgül, noktalı virgül, iki nokta, üç nokta, soru, ünlem, tırnak, ayraç ve kesme işaretleri ait oldukları kelimelere bitişik yazılır; (kesme hariç) işaretten sonra bir boşluk bırakılır.\n\n\n\nNOKTA ( . )\n\nCümlenin sonuna konur.\nÖr: Türk Dil Kurumu, 1932 yılında kurulmuştur.\n\nKısaltmaların sonuna konur.\nÖr: Dr., Prof., Alb., Cad., Sok., s., vb.\n\nSıra bildirmek için rakamlardan sonra konur.\nÖr: 3., 15.; II. Mehmet, XV. yüzyıl.\n\nMaddeleri gösteren rakam/harflerden sonra konur.\nÖr: I. 1. A. a.\n\nTarih yazımında gün-ay-yılı ayırır.\nÖr: 29.05.1453\nNot: Ay adları yazıylaysa nokta kullanılmaz (29 Mayıs 1453).\n\nSaat-dakika ayırır.\nÖr: 09.15, 13.00\n\nKünye sonuna konur.\n\nBüyük sayılar üçlü gruplara ayrılır.\nÖr: 49.750.812\n\nGenel ağ adreslerinde; matematikte çarpma yerine de kullanılabilir.\nÖr: 4.5 = 20\n\n\n\nVİRGÜL ( , )\n\nEş görevli öğeleri ayırır.\n\nSıralı cümleleri ayırır.\n\nUzun cümlede yüklemden uzak özneyi belirginleştirir.\n\nAra söz/ara cümleyi ayırır.\n\nAnlama güç katan tekrarlar arasında kullanılır.\n\nTırnak dışındaki aktarım cümlelerinden sonra; konuşma çizgisinden sonraki alıntının bitiminde kullanılır.\n\nKonuşma bölümünden önceki ifadenin sonunda kullanılabilir.\n\nEvet, hayır, peki, olur vb. kelimelerden sonra; hitaplardan sonra.\n\nAnlam karışıklığını önlemek için ayraç göreviyle.\n\nKesirleri ayırır: 38,6 – 0,45\n\nArt arda gelen zarf-fiillerden sonra kullanılabilir (anlam için).\n\n“Bu, şu, o” zamirleri özne olduğunda ardından virgül gelebilir.\n\nUyarılar (kısa):\n– “ve, veya, yahut, ya…ya, hem…hem, gerek…gerek, ister…ister, ne…ne” bağlaçlarının önüne/arkasına virgül konmaz.\n– Bağlaç “da/de”den sonra virgül konmaz.\n– “-ınca/-ince” anlamlı “mi/mı” zarf-fiilinden; şart ekinden sonra virgül konmaz.\n– Sıralı/bağlı soru cümlelerinde soru işareti en sona konur.\n\n\n\nNOKTALI VİRGÜL ( ; )\n\nVirgüllerle ayrılmış tür veya takımları birbirinden ayırır.\n\nÖgeleri arasında virgül bulunan sıralı cümleleri ayırır.\n\nGerektiğinde özneyi belirginleştirir.\n\n\n\nİKİ NOKTA ( : )\n\nAçıklama/örnek verilecek cümlenin sonunda.\n\nKarşılıklı konuşmada, konuşanı belirten sözlerden sonra.\n\nMatematikte bölme (56:8=7); URL’lerde kullanımı görülebilir.\n\nSes bilgisinde uzun ünlüyü gösterebilir (ders bağlamına göre).\n\n\n\nÜÇ NOKTA ( ... )\n\nTamamlanmamış, eksiltili anlatımın sonunda.\n\nSakıncalı görülen sözlerin yerine.\n\nAlıntıda atlanan yerleri göstermek için.\n\nDuyguyu pekiştirmek/ sözün kesildiğini belirtmek için.\nNot: Ünlem/sorudan sonra üç nokta gerekmez; iki işaret yeterlidir. Üçten az/çok nokta kullanılmaz.\n\n\n\nSORU İŞARETİ ( ? )\n\nSoru eki/sözü içeren cümlelerin sonunda.\n\nSoru ifadesi taşıyan kısa cümleciklerde.\n\nBilinmeyen/şüpheli bilgi yanına parantez içinde.\nNot: Yan cümle zarf tümleciyse temel cümle soru değilse sonda “?” kullanılmaz.\n\n\n\nÜNLEM ( ! )\n\nDuyguları (sevinç, şaşkınlık, acı vb.) anlatan cümlelerin sonunda.\n\nSeslenme/hitap/uyarı sözlerinden sonra ya da cümle sonunda.\n\nAlay/kinaye/küçümseme için parantez içinde (!) kullanılır.\n\n\n\nKISA ÇİZGİ ( - )\n\nSatır sonu bölünmelerinde.\n\nAra söz/ara cümleyi ayırmada (bitişik).\n\nKök-gövde-ek ayırmada; eklerin gösteriminde.\n\nHeceleri göstermek için.\n\n“arasında, ile, -den…-e” anlamlarında kelime/sayılar arasında: 09.30-10.30, Türk-Alman.\n\nMatematikte çıkarma; negatif değerleri göstermek için: -2 °C.\nNot: Sayı adlarının yinelenmesinde araya kısa çizgi girmez (on on beş yıl).\n\n\n\nUZUN ÇİZGİ ( — )\nYazıda konuşmaları göstermek için (konuşma çizgisi). Oyunlarda konuşanın adından sonra da konabilir. Tırnak içinde konuşma veriliyorsa uzun çizgi kullanılmaz.\n\n\n\nEĞİK ÇİZGİ ( / )\n\nDizeler yan yana yazılırken araya konur.\n\nAdreste numara/semt-şehir arasında.\n\nTarih yazımında: 18/11/1969\n\nEklerin farklı biçimlerini göstermek: -a/-e, -lık/-lik.\n\nURL’lerde; matematikte bölmede: 70/2=35\n\nBirim oranlarında: g/sn\n\n\n\nTERS EĞİK ÇİZGİ ( \\ )\nBilişimde dizin ayırmada: C:\\Klasör\\AltKlasör\n\n\n\nTIRNAK İŞARETİ ( “ ” )\n\nDoğrudan alıntılar.\n\nÖzel vurgu yapılmak istenen sözler.\n\nEser, yazı, bölüm adları.\nNot: Tırnak içindeki noktalama işareti tırnak içinde kalır. Tırnak içinden sonra kesme işareti kullanılmaz.\n\n\n\nTEK TIRNAK ( ‘ ’ )\nTırnak içindeki söz içinde yeniden tırnağa alınması gereken ibareyi göstermek için.\n\n\n\nDENDEN İŞARETİ ( \" )\nListelerde/çizelgelerde alt alta tekrar eden aynı söz/ibareleri yinelememek için.\n\n\n\nYAY AYRAÇ ( )\n\nCümle dışı ek bilgiler; cümle değeri taşıyorsa uygun noktalama içeride kalır.\n\nÖzel veya cins isme ait ek, ayraçtan önce yazılır.\n\nTiyatro/senaryoda hareket-durum bildirir.\n\nKünye/yazar göstermek için.\n\nÜç nokta, parantez içinde verilebilir.\n\nAlay/küçümseme (!) ve şüphe (?) parantez içinde gösterilebilir.\n\nMaddelemelerde kapanış ayracı kullanılır: I) 1) A) a)\n\n\n\nKÖŞELİ AYRAÇ ( [ ] )\n\nParantez içinde parantez gerektiğinde önce köşeli, sonra yay ayraç.\n\nAktarımlarda çeviren/düzenleyenin eklemeleri.\n\nKünye ayrıntıları ve düzeltmeler.\n\n\n\nKESME İŞARETİ ( ’ )\n\nÖzel adlara gelen çekim eklerini ayırır: Türkiye’nin, Atatürk’ü.\nNotlar (özet):\n– Kurum/kuruluş adlarına gelen ekler kesmeyle ayrılmaz: Türk Dil Kurumundan.\n– Yapım eki, çokluk eki ve bunlardan sonra gelen ekler kesmeyle ayrılmaz: Türkçe, Türklük, Türkçenin.\n– Kısaltma ve sayılara gelen ekler kesmeyle ayrılır: TBMM’nin, 1985’te, 8’inci madde.\n– Belirli tarih bildiren ay/gün adlarına gelen ekler kesmeyle ayrılır: 17 Aralık’a.\n– Yer adlarında kısaltmalı söyleyişte kesme kullanılır: Boğaz’dan.\n– Özel ad için parantez içi açıklama varsa kesme parantezden önce gelir: Yunus Emre’nin (1240?-1320).\n– AB gibi çok sözcüklü özel adlarda ek kesmeyle ayrılır: Avrupa Birliği’ne.\n\n\n\nÖRNEK KÜNYE YAZIMI\nFalih Rıfkı Atay, Tuna Kıyıları, Remzi Kitabevi, İstanbul, 1938.",
+      "duration": 15,
+      "isPublished": true,
+      "createdAt": "2025-09-15T14:00:32.563Z",
+      "updatedAt": "2025-09-15T14:02:10.784Z",
+      "authorId": "admin"
+    },
+    {
+      "id": "4",
+      "title": "TEMEL KAVRAMLAR",
+      "description": "Bu yazılı içerikte matematiğin temel kavramlarını öğrenecek, sayılar, işlemler, semboller ve temel kurallarla ilgili bilgilerinizi pekiştireceksiniz.",
+      "type": "ARTICLE",
+      "category": "Matematik",
+      "content": "Matematik Temel Kavramlar\n\n\n1. Rakam\n\nSayıların yazılmasında kullanılan sembollere rakam denir. Onluk sayı sisteminde 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 rakamları vardır.\n\n\n\n2. Sayılar\n\nDoğal Sayılar (N): 0, 1, 2, 3, 4, …\n\nSayma Sayıları (N⁺): 1, 2, 3, 4, …\n\nTam Sayılar (Z): …, -3, -2, -1, 0, 1, 2, 3, …\n\nPozitif Tam Sayılar (Z⁺): 1, 2, 3, …\n\nNegatif Tam Sayılar (Z⁻): -1, -2, -3, …\n\n\n\n3. Rasyonel Sayılar (Q)\n\nPaydası sıfır olmayan kesir biçiminde yazılabilen sayılardır.\nÖrnek: 1/2, -3/4, 5, 0.75\n\n\n\n4. İrrasyonel Sayılar (Q')\n\nKesir biçiminde yazılamayan sayılardır.\nÖrnek: √2, √7, π, e\n\n\n\n5. Gerçel (Reel) Sayılar (R)\n\nRasyonel ve irrasyonel sayıların birleşimi. Tüm sayı doğrusu reel sayıları gösterir.\n\n\n\n6. Karmaşık Sayılar (C)\n\na ve b reel sayılar olmak üzere, a + bi biçiminde yazılan sayılardır. i² = -1'dir.\n\n\n\n7. Ardışık Sayılar\n\nBirbirini takip eden sayılardır.\nÖrnek: n, n+1, n+2 …\n\nArdışık tamsayıların farkı 1'dir.\n\nArdışık tek sayılar: 1, 3, 5, 7 …\n\nArdışık çift sayılar: 2, 4, 6, 8 …\n\nArdışık sayıların toplamı: (İlk Terim + Son Terim) × Terim Sayısı / 2\n\n\n\n8. Tek ve Çift Sayılar\n\nTek sayılar: 2n+1 biçiminde yazılır (örnek: 1, 3, 5).\n\nÇift sayılar: 2n biçiminde yazılır (örnek: 2, 4, 6).\n\nİşlem kuralları:\n\nTek + Tek = Çift\n\nÇift + Çift = Çift\n\nTek + Çift = Tek\n\nTek × Tek = Tek\n\nÇift × (Tek veya Çift) = Çift\n\n\n\n9. Çarpanlar ve Faktöriyel\n\nn! = 1 × 2 × 3 × … × n\n\n0! = 1 kabul edilir.\n\nÖrnek: 5! = 1×2×3×4×5 = 120\n\n\n\n10. Asal Sayılar\n\nYalnızca 1 ve kendisine bölünebilen doğal sayılardır.\n\nİlk asal sayılar: 2, 3, 5, 7, 11, 13, …\n\nEn küçük asal sayı 2'dir (aynı zamanda tek çift asal sayıdır).\n\nAsal Çarpanlar: Bir sayının asal sayıların çarpımı biçiminde yazılmasıdır.\n\nAralarında Asal: 1'den başka ortak böleni olmayan sayılardır.\n\n\n\n11. Sayı Çözümlemesi\n\nBir sayının basamak değerlerine ayrılmasıdır.\nÖrnek: 35647 = 3×10⁴ + 5×10³ + 6×10² + 4×10¹ + 7×10⁰\n\n\n\n📌 Özet: Bu bölümde rakamlar, sayılar, tek–çift sayılar, ardışık sayılar, asal sayılar ve faktöriyel gibi temel kavramları öğrendiniz. Bu bilgiler matematiğin temelini oluşturur ve sonraki konular için sağlam bir altyapı sağlar.",
+      "duration": 15,
+      "isPublished": true,
+      "createdAt": "2025-09-15T14:00:32.563Z",
+      "updatedAt": "2025-09-15T14:03:30.691Z",
+      "authorId": "admin"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useAuth } from '@/context/AuthProvider';
+import { useAuth } from '@/context/HybridAuthProvider';
 import { Button } from '@/components/ui/button';
 import {
   Card,

@@ -165,7 +165,7 @@ export function HybridAuthProvider({ children }: { children: React.ReactNode }) 
     firstName?: string,
     lastName?: string,
     age?: number,
-    gender?: 'male' | 'female'
+    gender?: 'male' | 'female' | 'other'
   ) => {
     // Önce local'e kaydet
     try {
@@ -182,10 +182,10 @@ export function HybridAuthProvider({ children }: { children: React.ReactNode }) 
         age,
         gender,
         role: 'student', // Yeni kullanıcılar student olarak başlar
-        isEmailVerified: false, // Yeni kullanıcılar doğrulanmamış olarak başlar
+        isEmailVerified: true, // Local auth'da email doğrulama gerekmez
       });
 
-      console.log('User added to local database:', newLocalUser.email);
+      console.log('User added to local database:', (await newLocalUser).email);
 
       // Supabase'e de kaydet (eğer yapılandırılmışsa)
       if (isSupabaseConfigured) {
@@ -194,7 +194,7 @@ export function HybridAuthProvider({ children }: { children: React.ReactNode }) 
             email,
             password,
             options: {
-              emailRedirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/callback`,
+              emailRedirectTo: `https://edusmart.tr/auth/callback`,
               data: {
                 full_name: `${firstName || ''} ${lastName || ''}`.trim(),
                 age: age,
@@ -285,7 +285,7 @@ export function HybridAuthProvider({ children }: { children: React.ReactNode }) 
 
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/auth/reset`,
+        redirectTo: `https://edusmart.tr/auth/reset`,
       });
 
       if (error) {

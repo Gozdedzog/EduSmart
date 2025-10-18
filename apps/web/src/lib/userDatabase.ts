@@ -6,7 +6,7 @@ export interface LocalUser {
   firstName: string;
   lastName: string;
   age?: number;
-  gender?: 'male' | 'female';
+  gender?: 'male' | 'female' | 'other';
   role: 'admin' | 'student';
   isEmailVerified: boolean;
   createdAt: string;

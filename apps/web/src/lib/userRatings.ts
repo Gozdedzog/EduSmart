@@ -9,6 +9,7 @@ import {
 } from './jsonDatabase';
 
 export interface UserRating {
+  id: string;
   userId: string;
   contentId: string;
   rating: number;
@@ -43,6 +44,7 @@ export function saveUserRating(
 ): void {
   try {
     const newRating: UserRating = {
+      id: `${userId}-${contentId}-${Date.now()}`,
       userId,
       contentId,
       rating,

@@ -50,7 +50,7 @@ export default function IceriklerPage({
       try {
         const courses = await getAllCourses();
         // Sadece yayınlanmış kursları filtrele
-        const publishedCourses = courses.filter(course => course.isPublished);
+        const publishedCourses = courses.filter((course: any) => course.isPublished);
         setAllCourses(publishedCourses);
       } catch (error) {
         console.error('Error loading courses:', error);

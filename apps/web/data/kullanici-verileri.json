@@ -1,0 +1,95 @@
+{
+  "kullanicilar": [
+    {
+      "email": "test@example.com",
+      "password": "123456",
+      "firstName": "Test",
+      "lastName": "User",
+      "age": 25,
+      "gender": "male",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "test123",
+      "createdAt": "2025-10-16T13:35:00.000Z",
+      "updatedAt": "2025-10-16T13:35:00.000Z"
+    },
+    {
+      "email": "bewep70452@memeazon.com",
+      "password": "123456",
+      "firstName": "test",
+      "lastName": "gozde",
+      "age": 16,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760622183377",
+      "createdAt": "2025-10-16T13:43:03.377Z",
+      "updatedAt": "2025-10-16T13:43:03.377Z"
+    },
+    {
+      "email": "rohey16492@memeazon.com",
+      "password": "123456",
+      "firstName": "gozde",
+      "lastName": "test",
+      "age": 19,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760721756485",
+      "createdAt": "2025-10-17T17:22:36.485Z",
+      "updatedAt": "2025-10-17T17:22:36.485Z"
+    },
+    {
+      "email": "datak42596@memeazon.com",
+      "password": "123456",
+      "firstName": "gozde",
+      "lastName": "test",
+      "age": 19,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760723859009",
+      "createdAt": "2025-10-17T17:57:39.009Z",
+      "updatedAt": "2025-10-17T17:57:39.009Z"
+    },
+    {
+      "email": "xidiya8212@nrlord.com",
+      "password": "123456",
+      "firstName": "gozde",
+      "lastName": "tester",
+      "age": 21,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760729815775",
+      "createdAt": "2025-10-17T19:36:55.775Z",
+      "updatedAt": "2025-10-17T19:36:55.775Z"
+    },
+    {
+      "email": "nolobe4466@memeazon.com",
+      "password": "123456",
+      "firstName": "gozfde",
+      "lastName": "test",
+      "age": 20,
+      "gender": "female",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760730035537",
+      "createdAt": "2025-10-17T19:40:35.537Z",
+      "updatedAt": "2025-10-17T19:40:35.537Z"
+    },
+    {
+      "email": "kesedas294@memeazon.com",
+      "password": "123456",
+      "firstName": "gozde",
+      "lastName": "deneme",
+      "age": 18,
+      "gender": "male",
+      "role": "student",
+      "isEmailVerified": false,
+      "id": "1760735639065",
+      "createdAt": "2025-10-17T21:13:59.065Z",
+      "updatedAt": "2025-10-17T21:13:59.065Z"
+    }
+  ]
+}

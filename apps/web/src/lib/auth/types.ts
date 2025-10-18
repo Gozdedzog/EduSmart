@@ -10,11 +10,11 @@ export interface User {
   firstName?: string;
   lastName?: string;
   age?: number;
-  gender?: 'male' | 'female';
+  gender?: 'male' | 'female' | 'other';
   user_metadata?: { 
     [key: string]: any;
     age?: number;
-    gender?: 'male' | 'female';
+    gender?: 'male' | 'female' | 'other';
   };
 }
 

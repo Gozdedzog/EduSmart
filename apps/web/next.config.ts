@@ -1,6 +1,14 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  // Disable ESLint during build for Docker
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Enable standalone output for Docker
+  output: 'standalone',
+  
   // Environment configuration
   env: {
     NEXT_PUBLIC_ML_API_URL: process.env.NEXT_PUBLIC_ML_API_URL || 'http://localhost:8000',

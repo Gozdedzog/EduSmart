@@ -1,0 +1,344 @@
+{
+  "egitimGecmisi": [
+    {
+      "userId": "b4f6056d-a631-41d3-ba93-35598ddfc431",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-25T21:58:09.134Z",
+      "score": 3,
+      "id": "1758836833217"
+    },
+    {
+      "userId": "b4f6056d-a631-41d3-ba93-35598ddfc431",
+      "contentId": "3",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "ARTICLE",
+      "category": "Türkçe",
+      "completedAt": "2025-09-25T22:00:19.649Z",
+      "score": 6,
+      "id": "1758837619744"
+    },
+    {
+      "userId": "f1fbae6a-ba33-4912-a6f3-6ba547c941c9",
+      "contentId": "2",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "VIDEO",
+      "category": "Türkçe",
+      "completedAt": "2025-09-25T22:15:02.539Z",
+      "score": 6,
+      "id": "1758838502726"
+    },
+    {
+      "userId": "b95e8b5d-c4ba-4827-b661-d80d69dc5427",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T11:22:59.693Z",
+      "score": 7,
+      "id": "1758972179828"
+    },
+    {
+      "userId": "b95e8b5d-c4ba-4827-b661-d80d69dc5427",
+      "contentId": "2",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "VIDEO",
+      "category": "Türkçe",
+      "completedAt": "2025-09-27T11:58:55.398Z",
+      "score": 6,
+      "id": "1758974335487"
+    },
+    {
+      "userId": "b95e8b5d-c4ba-4827-b661-d80d69dc5427",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T12:38:26.784Z",
+      "score": 7,
+      "id": "1758975442481"
+    },
+    {
+      "userId": "b95e8b5d-c4ba-4827-b661-d80d69dc5427",
+      "contentId": "3",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "ARTICLE",
+      "category": "Türkçe",
+      "completedAt": "2025-09-27T12:40:07.656Z",
+      "score": 8,
+      "id": "1758976807775"
+    },
+    {
+      "userId": "f5c53970-6071-43b2-aac8-02e397dc59ef",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T13:08:10.435Z",
+      "score": 11,
+      "id": "1758978490771"
+    },
+    {
+      "userId": "f5c53970-6071-43b2-aac8-02e397dc59ef",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T13:09:48.326Z",
+      "score": 10,
+      "id": "1758978588408"
+    },
+    {
+      "userId": "af701011-5261-425c-956d-eced8b372d9d",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T20:42:40.535Z",
+      "score": 3,
+      "id": "1759005760565"
+    },
+    {
+      "userId": "af701011-5261-425c-956d-eced8b372d9d",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-27T20:45:14.853Z",
+      "score": 12,
+      "id": "1759005914900"
+    },
+    {
+      "userId": "1759143198713",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T12:37:03.296Z",
+      "score": 6,
+      "id": "1759149423428"
+    },
+    {
+      "userId": "1759143198713",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T12:39:03.216Z",
+      "score": 20,
+      "id": "1759149543283"
+    },
+    {
+      "userId": "9a860168-fe14-4f37-82cc-426c7fd5783d",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T12:51:24.047Z",
+      "score": 9,
+      "id": "1759150284165"
+    },
+    {
+      "userId": "9a860168-fe14-4f37-82cc-426c7fd5783d",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T12:53:38.161Z",
+      "score": 24,
+      "id": "1759150418236"
+    },
+    {
+      "userId": "c2d1cb68-27a3-4788-831c-398a36d55a9e",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T13:16:13.466Z",
+      "score": 4,
+      "id": "1759151773978"
+    },
+    {
+      "userId": "c2d1cb68-27a3-4788-831c-398a36d55a9e",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-09-29T13:19:07.419Z",
+      "score": 22,
+      "id": "1759151947443"
+    },
+    {
+      "userId": "4bd01a04-5666-4102-a264-6129e4230991",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-01T17:06:55.297Z",
+      "score": 9,
+      "id": "1759338415348"
+    },
+    {
+      "userId": "4bd01a04-5666-4102-a264-6129e4230991",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-01T17:08:00.244Z",
+      "score": 20,
+      "id": "1759338480293"
+    },
+    {
+      "userId": "1b5faf21-1110-4bcf-b0d2-87227388a233",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-07T17:26:18.591Z",
+      "score": 7,
+      "id": "1759857978640"
+    },
+    {
+      "userId": "1b5faf21-1110-4bcf-b0d2-87227388a233",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-07T17:27:57.724Z",
+      "score": 26,
+      "id": "1759858077807"
+    },
+    {
+      "userId": "1759857626952",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T12:58:38.847Z",
+      "score": 6,
+      "id": "1760619518857"
+    },
+    {
+      "userId": "1760620214059",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:17:24.777Z",
+      "score": 3,
+      "id": "1760620644809"
+    },
+    {
+      "userId": "1760620214059",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:19:17.851Z",
+      "score": 12,
+      "id": "1760620757872"
+    },
+    {
+      "userId": "ccf4152f-6151-485c-978c-dd6749081673",
+      "contentId": "2",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "VIDEO",
+      "category": "Türkçe",
+      "completedAt": "2025-10-16T13:30:02.146Z",
+      "score": 8,
+      "id": "1760621402167"
+    },
+    {
+      "userId": "ccf4152f-6151-485c-978c-dd6749081673",
+      "contentId": "3",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "ARTICLE",
+      "category": "Türkçe",
+      "completedAt": "2025-10-16T13:31:27.385Z",
+      "score": 8,
+      "id": "1760621487407"
+    },
+    {
+      "userId": "ccf4152f-6151-485c-978c-dd6749081673",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:38:16.281Z",
+      "score": 7,
+      "id": "1760621896309"
+    },
+    {
+      "userId": "ccf4152f-6151-485c-978c-dd6749081673",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:39:14.651Z",
+      "score": 10,
+      "id": "1760621954671"
+    },
+    {
+      "userId": "ba1b37f4-1f64-410c-b5fc-465892a3a3d5",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:49:04.602Z",
+      "score": 11,
+      "id": "1760622544619"
+    },
+    {
+      "userId": "ba1b37f4-1f64-410c-b5fc-465892a3a3d5",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-16T13:50:00.229Z",
+      "score": 7,
+      "id": "1760622600276"
+    },
+    {
+      "userId": "9e806ba2-e25b-4992-a2c3-feabc4c98ba1",
+      "contentId": "1",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "VIDEO",
+      "category": "Matematik",
+      "completedAt": "2025-10-17T19:42:06.727Z",
+      "score": 11,
+      "id": "1760730126738"
+    },
+    {
+      "userId": "9e806ba2-e25b-4992-a2c3-feabc4c98ba1",
+      "contentId": "4",
+      "contentTitle": "TEMEL KAVRAMLAR",
+      "contentType": "ARTICLE",
+      "category": "Matematik",
+      "completedAt": "2025-10-17T19:43:07.109Z",
+      "score": 12,
+      "id": "1760730187120"
+    },
+    {
+      "userId": "1760733013242",
+      "contentId": "2",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "VIDEO",
+      "category": "Türkçe",
+      "completedAt": "2025-10-17T20:43:06.719Z",
+      "score": 7,
+      "id": "1760733786730"
+    },
+    {
+      "userId": "1760733013242",
+      "contentId": "3",
+      "contentTitle": "NOKTALAMA İŞARETLERİ",
+      "contentType": "ARTICLE",
+      "category": "Türkçe",
+      "completedAt": "2025-10-17T20:43:59.834Z",
+      "score": 10,
+      "id": "1760733839846"
+    }
+  ]
+}

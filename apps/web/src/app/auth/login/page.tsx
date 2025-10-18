@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useAuth } from '@/context/HybridAuthProvider';
 import { Button } from '@/components/ui/button';
@@ -13,13 +13,28 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-export default function LoginPage() {
+function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
   const { login } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const verified = searchParams.get('verified');
+    const verifiedEmail = searchParams.get('email');
+    const message = searchParams.get('message');
+    
+    if (verified === 'true' && verifiedEmail) {
+      setSuccessMessage(`Email doğrulama başarılı! ${verifiedEmail} adresiniz doğrulandı. Şimdi giriş yapabilirsiniz.`);
+      setEmail(verifiedEmail);
+    } else if (message) {
+      setSuccessMessage(message);
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,9 +53,8 @@ export default function LoginPage() {
       if (next) {
         router.push(next);
       } else {
-        // Check if user is admin
-        const isAdmin = result.user?.role === 'admin';
-        router.push(isAdmin ? '/admin' : '/dashboard');
+        // Default redirect to dashboard
+        router.push('/dashboard');
       }
     }
 
@@ -61,6 +75,11 @@ export default function LoginPage() {
           </CardHeader>
           <CardContent>
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {successMessage && (
+                <div className="bg-green-50 border border-green-200 text-green-600 px-4 py-3 rounded">
+                  {successMessage}
+                </div>
+              )}
               {error && (
                 <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded">
                   {error}
@@ -134,5 +153,13 @@ export default function LoginPage() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }

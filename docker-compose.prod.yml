@@ -1,0 +1,101 @@
+# EduSmart Platform - Production Docker Compose with Multi-Architecture Support
+
+services:
+  # Frontend Service
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_ML_API_URL=https://api.yourdomain.com
+      - NEXT_PUBLIC_APP_URL=https://yourdomain.com
+    env_file:
+      - .env.production
+    volumes:
+      # Named volumes for persistent data
+      - web_data:/app/data
+    depends_on:
+      api:
+        condition: service_healthy
+    networks:
+      - edusmart-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Backend API Service
+  api:
+    build:
+      context: ./apps/api
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DEBUG=false
+      - ML_MODEL_PATH=./data/best_learning_model_full.joblib
+      - LOG_LEVEL=WARNING
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_ORIGINS=["https://yourdomain.com","https://www.yourdomain.com"]
+    env_file:
+      - .env.production
+    volumes:
+      # Named volumes for persistent data
+      - api_data:/app/data:ro
+      - api_logs:/app/logs
+    networks:
+      - edusmart-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Caddy Reverse Proxy with SSL
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+      - api
+    networks:
+      - edusmart-network
+    restart: unless-stopped
+
+networks:
+  edusmart-network:
+    driver: bridge
+
+volumes:
+  # Named volumes for persistent data
+  web_data:
+    driver: local
+  api_data:
+    driver: local
+  api_logs:
+    driver: local
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local

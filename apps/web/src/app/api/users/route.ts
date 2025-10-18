@@ -2,13 +2,37 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-const USERS_FILE = path.join(process.cwd(), '..', '..', 'data', 'kullanici-verileri.json');
+// Try multiple possible paths for the users file
+const POSSIBLE_PATHS = [
+  path.join('/app', 'data', 'kullanici-verileri.json'),
+  path.join(process.cwd(), 'data', 'kullanici-verileri.json'),
+  path.join(process.cwd(), '..', '..', 'data', 'kullanici-verileri.json'),
+  '/app/data/kullanici-verileri.json',
+  './data/kullanici-verileri.json'
+];
+
+function findUsersFile(): string | null {
+  for (const filePath of POSSIBLE_PATHS) {
+    if (fs.existsSync(filePath)) {
+      return filePath;
+    }
+  }
+  return null;
+}
 
 // GET - Tüm kullanıcıları getir
 export async function GET() {
   try {
-    const data = fs.readFileSync(USERS_FILE, 'utf8');
+    const usersFile = findUsersFile();
+    if (!usersFile) {
+      console.error('Users file not found in any of the expected locations');
+      return NextResponse.json({ error: 'Users file not found' }, { status: 404 });
+    }
+    
+    console.log('Reading users file from:', usersFile);
+    const data = fs.readFileSync(usersFile, 'utf8');
     const users = JSON.parse(data);
+    console.log('Successfully loaded users:', users.kullanicilar?.length || 0);
     return NextResponse.json(users);
   } catch (error) {
     console.error('Error reading users file:', error);
@@ -26,7 +50,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'kullanicilar is required' }, { status: 400 });
     }
     
-    fs.writeFileSync(USERS_FILE, JSON.stringify({ kullanicilar }, null, 2));
+    const usersFile = findUsersFile();
+    if (!usersFile) {
+      console.error('Users file not found for saving');
+      return NextResponse.json({ error: 'Users file not found' }, { status: 404 });
+    }
+    
+    fs.writeFileSync(usersFile, JSON.stringify({ kullanicilar }, null, 2));
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error saving users:', error);

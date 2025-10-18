@@ -248,9 +248,10 @@ export default function ContentDisplayModal({
             height: '100%',
             events: {
               onStateChange: (event: YT.PlayerEvent) => {
-                if (event.data === YT.PlayerState.ENDED) {
+                const playerState = event.target.getPlayerState();
+                if (playerState === YT.PlayerState.ENDED) {
                   setShowVideoEndModal(true);
-                } else if (event.data === YT.PlayerState.PLAYING) {
+                } else if (playerState === YT.PlayerState.PLAYING) {
                   console.log('Video oynatılmaya başladı, süre takibi başlatılıyor');
                   startVideoTimeTracking(event.target);
                 }
@@ -259,7 +260,7 @@ export default function ContentDisplayModal({
                 console.log('YouTube player ready');
               },
               onError: (event: YT.PlayerEvent) => {
-                console.error('YouTube player error:', event.data);
+                console.error('YouTube player error:', event);
               }
             }
           });
@@ -622,7 +623,6 @@ export default function ContentDisplayModal({
               )}
               {content && content.type === 'VIDEO' && (
               <div className="space-y-4">
-                {console.log('Rendering VIDEO content for:', content.title)}
                 <div className="aspect-video bg-slate-100 rounded-lg overflow-hidden">
                     <div ref={playerRef} className="w-full h-full">
                       {/* Always show iframe for now */}
@@ -1352,13 +1352,6 @@ function TestModal({
                                   );
                                 })}
                               </div>
-                              {question.explanation && (
-                                <div className="mt-3 p-3 bg-blue-50 rounded-lg">
-                                  <p className="text-sm text-blue-800">
-                                    <strong>Açıklama:</strong> {question.explanation}
-                                  </p>
-                                </div>
-                              )}
                             </div>
                           </div>
                         </div>

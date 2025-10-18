@@ -1,5 +1,6 @@
 # EduSmart API - Professional Dockerfile
-FROM python:3.11-slim
+# Multi-architecture support
+FROM --platform=$BUILDPLATFORM python:3.11-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -7,6 +8,19 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONPATH=/app \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Application environment variables
+ENV ENVIRONMENT=production \
+    DEBUG=false \
+    ML_MODEL_PATH=./data/best_learning_model_full.joblib \
+    LOG_LEVEL=WARNING \
+    SECRET_KEY=your-super-secure-secret-key-here \
+    ALLOWED_ORIGINS='["http://localhost:3000","https://localhost:3000","http://localhost:3001","https://localhost:3001"]' \
+    ALLOWED_HOSTS='["*"]' \
+    API_V1_STR="/api/v1" \
+    PROJECT_NAME="EduSmart API" \
+    VERSION="1.0.0" \
+    ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 # Set work directory
 WORKDIR /app
@@ -30,10 +44,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY src/ ./src/
+
+# Copy ML model and data files
 COPY data/ ./data/
 
-# Create logs directory
-RUN mkdir -p logs && chown -R app:app logs
+# Create necessary directories
+RUN mkdir -p logs data && chown -R app:app logs data
 
 # Switch to non-root user
 USER app
